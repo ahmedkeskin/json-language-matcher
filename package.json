@@ -1,0 +1,22 @@
+{
+  "name": "json-language-matcher",
+  "version": "1.0.0",
+  "description": "* Find out the missing translation words in each language file.\r * Add new translation word to all language files by single input.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedkeskin/json-language-matcher.git"
+  },
+  "author": "ahmedkeskin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmedkeskin/json-language-matcher/issues"
+  },
+  "homepage": "https://github.com/ahmedkeskin/json-language-matcher#readme",
+  "dependencies": {
+    "electron": "^7.1.0"
+  }
+}
