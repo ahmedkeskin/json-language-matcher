@@ -1,7 +1,7 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
-
+const menu = require('./Components/menuBar');
 const { app, BrowserWindow, Menu, dialog } = electron;
 let mainWindow;
 
@@ -22,42 +22,8 @@ app.on('ready', function () {
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
 
     // Insert menu
-
     Menu.setApplicationMenu(mainMenu);
 });
 
 // Create menu template
-const mainMenuTemplate = [
-    {
-        label: 'File',
-        submenu: [
-            {
-                label: 'Add New Language File'
-            },
-            {
-                label: 'Open Folder'
-            },
-            {
-                label: 'Quit',
-                click() {
-                    app.quit();
-                }
-            }
-        ]
-    },
-    {
-        label: 'Operation',
-        submenu: [
-            {
-                label: 'Check Missing Translations',
-                click() {
-                    dialog.showMessageBoxSync({
-                        title: 'Information',
-                        message: 'There is no missing translation'
-                    });
-                }
-            }
-        ]
-    }
-]
-
+const mainMenuTemplate = menu.MainMenu;
